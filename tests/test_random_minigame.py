@@ -5,6 +5,7 @@ import random
 # from examplepackagefb1258 import random_minigame
 
 class Tests:
+        @pytest.fixture
         def example_fixture(self):
             """
             An example of a pytest fixture - a function that can be used for setup and teardown before and after test functions are run.
@@ -43,17 +44,18 @@ class Tests:
                     result = random_minigame.roll_die(num_rolls, num_sides, low_val, step)
                     
                     # calculate which numbers are on the sides of the dice
-                    numbers = []
+                    faces = []
                     for val in range(1, num_sides + 1):
-                        numbers.append(step * (val - 1) + low_val)
+                        faces.append(step * (val - 1) + low_val)
                     
                     # calculate all possible results
-                    possible_results = numbers
+                    possible_results = {0}
                     for roll in range(num_rolls):
-                         for val in possible_results:
-                              for face in numbers:
-                                   if (val + face <= max_val):
-                                        possible_results.append(val + face)
+                        new_possible_results = set()
+                        for val in possible_results:
+                            for face in faces:
+                                new_possible_results.add(val + face)
+                        possible_results = new_possible_results
 
                     assert (
                         result >= min_val
@@ -65,4 +67,4 @@ class Tests:
 
                     assert (
                         result in possible_results
-                    ), f"Expected roll_die() to return a linear combination of the numbers from {low_val} to {low_val + num_sides - 1}. Instead, it returned {result}"
+                    ), f"Expected roll_die() to return a linear combination of the faces of the die ({faces}). Instead, it returned {result}"
