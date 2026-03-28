@@ -27,7 +27,7 @@ class Tests:
             actual = True  # the value we see in reality
             assert actual == expected, "Expected True to be equal to True!"
 
-        def test_roll_die(self):
+        def test_roll_dice(self):
               # since we are rolling the dice randomly, we should check a bunch of times
               for i in range(1, 101):
                     # randomly choose the details of the dice roll(s)
@@ -41,7 +41,7 @@ class Tests:
                     
                     
                     # get result
-                    result = random_minigame.roll_die(num_rolls, num_sides, low_val, step)
+                    result = random_minigame.roll_dice(num_rolls, num_sides, low_val, step)
                     
                     # calculate which numbers are on the sides of the dice
                     faces = []
