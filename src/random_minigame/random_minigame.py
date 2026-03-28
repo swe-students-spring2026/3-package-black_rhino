@@ -5,9 +5,9 @@ def roll_dice(num_rolls, num_sides, low_val, step):
     for face in range(num_sides):
         faces.append(low_val + (face * step))
 
-    sum = 0
+    total = 0
     for roll in range(num_rolls):
         side = random.randint(0, len(faces) - 1)
-        sum += faces[side]
+        total += faces[side]
     
-    return sum
+    return total
