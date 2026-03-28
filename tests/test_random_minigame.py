@@ -32,29 +32,37 @@ class Tests:
                     # randomly choose the details of the dice roll(s)
                     num_rolls = random.randint(1, 10)
                     num_sides = random.randint(1, 10)
-                    low_val = random.randint(1, i)
-                    step = random.randint(1, i)
+                    low_val = random.randint(1, 10)
+                    step = random.randint(1, 10)
+
+                    min_val = low_val * num_rolls
+                    max_val = (low_val + (num_sides - 1) * step) * num_rolls
+                    
                     
                     # get result
-                    result = random_minigame.roll_die(num_rolls, num_sides, low_val)
+                    result = random_minigame.roll_die(num_rolls, num_sides, low_val, step)
                     
                     # calculate which numbers are on the sides of the dice
                     numbers = []
                     for val in range(1, num_sides + 1):
-                        numbers.append(val + low_val - 1)
+                        numbers.append(step * (val - 1) + low_val)
                     
                     # calculate all possible results
-                    possible_results = []
-                    for 
+                    possible_results = numbers
+                    for roll in range(num_rolls):
+                         for val in possible_results:
+                              for face in numbers:
+                                   if (val + face <= max_val):
+                                        possible_results.append(val + face)
 
                     assert (
-                        result > low_val * num_rolls - 1
-                    ), f"Expected roll_die() to return a value greater than {low_val*num_rolls - 1}. Instead, it returned {result}"
+                        result >= min_val
+                    ), f"Expected roll_die() to return a value greater than {min_val - 1}. Instead, it returned {result}"
 
                     assert (
-                        result < (low_val + num_sides - 1) * num_rolls + 1
-                    ), f"Expected roll_die() to return a value less than {(low_val + num_sides - 1) * num_rolls + 1}. Instead it returned {result}"
+                        result <= max_val
+                    ), f"Expected roll_die() to return a value less than {max_val + 1}. Instead it returned {result}"
 
                     assert (
-                        
+                        result in possible_results
                     ), f"Expected roll_die() to return a linear combination of the numbers from {low_val} to {low_val + num_sides - 1}. Instead, it returned {result}"
