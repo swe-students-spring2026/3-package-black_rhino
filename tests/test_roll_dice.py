@@ -5,28 +5,6 @@ import random
 # from examplepackagefb1258 import random_minigame
 
 class Tests:
-        @pytest.fixture
-        def example_fixture(self):
-            """
-            An example of a pytest fixture - a function that can be used for setup and teardown before and after test functions are run.
-            """
-
-            # place any setup you want to do before any test function that uses this fixture is run
-
-            yield  # at the yield point, the test function will run and do its business
-
-            # place with any teardown you want to do after any test function that uses this fixture has compl
-        
-        def test_sanity_check(self, example_fixture):
-            """
-            Test debugging... making sure that we can run a simple test that always passes.
-            Note the use of the example_fixture in the parameter list - any setup and teardown in that fixture will be run before and after this test function executes
-            From the main project directory, run the `python3 -m pytest` command to run all tests.
-            """
-            expected = True  # the value we expect to be present
-            actual = True  # the value we see in reality
-            assert actual == expected, "Expected True to be equal to True!"
-
         def test_roll_dice(self):
               # since we are rolling the dice randomly, we should check a bunch of times
               for i in range(1, 101):
@@ -59,12 +37,12 @@ class Tests:
 
                     assert (
                         result >= min_val
-                    ), f"Expected roll_die() to return a value greater than {min_val - 1}. Instead, it returned {result}"
+                    ), f"Expected roll_dice() to return a value greater than {min_val - 1}. Instead, it returned {result}"
 
                     assert (
                         result <= max_val
-                    ), f"Expected roll_die() to return a value less than {max_val + 1}. Instead it returned {result}"
+                    ), f"Expected roll_dice() to return a value less than {max_val + 1}. Instead it returned {result}"
 
                     assert (
                         result in possible_results
-                    ), f"Expected roll_die() to return a linear combination of the faces of the die ({faces}). Instead, it returned {result}"
+                    ), f"Expected roll_dice() to return a linear combination of the faces of the die ({faces}). Instead, it returned {result}"
