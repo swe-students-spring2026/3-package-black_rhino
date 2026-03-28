@@ -1,7 +1,6 @@
 import pytest
 import random
-import numpy as np
-import numpy.linalg as linalg
+
 # need to change this to be our project:
 # from examplepackagefb1258 import random_minigame
 
@@ -31,8 +30,8 @@ class Tests:
               # since we are rolling the dice randomly, we should check a bunch of times
               for i in range(1, 101):
                     # randomly choose the details of the dice roll(s)
-                    num_rolls = random.randint(1, i)
-                    num_sides = random.randint(1, i)
+                    num_rolls = random.randint(1, 10)
+                    num_sides = random.randint(1, 10)
                     low_val = random.randint(1, i)
                     step = random.randint(1, i)
                     
@@ -43,6 +42,10 @@ class Tests:
                     numbers = []
                     for val in range(1, num_sides + 1):
                         numbers.append(val + low_val - 1)
+                    
+                    # calculate all possible results
+                    possible_results = []
+                    for 
 
                     assert (
                         result > low_val * num_rolls - 1
@@ -53,18 +56,5 @@ class Tests:
                     ), f"Expected roll_die() to return a value less than {(low_val + num_sides - 1) * num_rolls + 1}. Instead it returned {result}"
 
                     assert (
-                        # we want to make sure that the result is a linear combination of the 
-                        # sides of the dice. we are solving the following linear system of 
-                        # equations:
-                            # x1 * n1 + x2 * n2 + x3 * n3 + ... = result
-                            # x1 + x2 + x3 + ... = num_rolls
-                        # we also need to note that each xi >= 0
                         
-                        x = np.array(
-                             [
-                                  
-                             ]
-                        )
-
-                          
                     ), f"Expected roll_die() to return a linear combination of the numbers from {low_val} to {low_val + num_sides - 1}. Instead, it returned {result}"
