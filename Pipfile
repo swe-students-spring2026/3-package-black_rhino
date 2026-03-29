@@ -5,16 +5,10 @@ name = "pypi"
 
 [packages]
 
-
-numpy = "*"
-pytest = "*"
-
-
 [dev-packages]
+pytest = "*"
+build = "*"
+twine = "*"
 
 [requires]
-
 python_version = "3.12"
-
-python_version = "3.14"
-
