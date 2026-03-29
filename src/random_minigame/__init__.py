@@ -1,0 +1,1 @@
+from .random_minigame import choose_option
