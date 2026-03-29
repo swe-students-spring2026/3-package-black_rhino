@@ -11,11 +11,6 @@ requires-python = ">=3.12"
 authors = [
   { name = "Black Rhino Team" }
 ]
-license = { text = "MIT" }
-
-[project.urls]
-Homepage = "https://github.com/swe-students-spring2026/3-package-black_rhino"
-Issues = "https://github.com/swe-students-spring2026/3-package-black_rhino/issues"
 
 [tool.setuptools]
 package-dir = {"" = "src"}
