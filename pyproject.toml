@@ -1,0 +1,19 @@
+[build-system]
+requires = ["setuptools>=77", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "black-rhino-random-minigame"
+version = "0.1.0"
+description = "A lighthearted Python package with random mini-game utilities."
+readme = "README.md"
+requires-python = ">=3.12"
+authors = [
+  { name = "Black Rhino Team" }
+]
+
+[tool.setuptools]
+package-dir = {"" = "src"}
+
+[tool.setuptools.packages.find]
+where = ["src"]
