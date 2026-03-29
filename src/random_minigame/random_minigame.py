@@ -46,3 +46,31 @@ def coin_flip(num_flips):
     else:
         return "tie"
 
+def generate_scores(names, low_score, high_score, ties_allowed):
+    if low_score > high_score:
+        raise ValueError("low_score must be less than or equal to high_score")
+
+    if not ties_allowed:
+        available_unique_scores = high_score - low_score + 1
+        if len(names) > available_unique_scores:
+            raise ValueError(
+                "Not enough unique scores for all names when ties are not allowed"
+            )
+
+    name_scores = {}
+    used_scores = set()
+
+    for name in names:
+        if ties_allowed:
+            score = random.randint(low_score, high_score)
+        else:
+            while True:
+                score = random.randint(low_score, high_score)
+                if score not in used_scores:
+                    used_scores.add(score)
+                    break
+
+        name_scores[name] = score
+
+    return name_scores
+

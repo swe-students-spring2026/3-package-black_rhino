@@ -1,6 +1,6 @@
 import random
 import pytest
-from random_minigame import choose_option, roll_dice, coin_flip
+from random_minigame import choose_option, roll_dice, coin_flip, generate_scores
 
 class Tests:
 
@@ -84,3 +84,26 @@ class Tests:
             assert isinstance(actual, str), f"Expected coin_flip() to return a string. Instead, it returned {type(actual)}"
             assert actual in {"heads", "tails", "tie"}, f"Expected coin_flip() to return 'heads', 'tails', or 'tie'. Instead, it returned '{actual}'"
             assert len(actual) > 0, f"Expected coin_flip() not to be empty. Instead, it returned a string with {len(actual)} characters"
+
+    # tests for generate_scores
+
+    def test_generate_scores(self):
+        names = ["Alice", "Bob", "Charlie"]
+        scores = generate_scores(names, 10, 20, True)
+
+        assert set(scores.keys()) == set(names)
+        assert len(scores) == len(names)
+        assert all(10 <= score <= 20 for score in scores.values())
+
+        names_no_ties = ["A", "B", "C", "D"]
+        scores_no_ties = generate_scores(names_no_ties, 1, 10, False)
+
+        assert len(scores_no_ties) == len(names_no_ties)
+        assert len(set(scores_no_ties.values())) == len(names_no_ties)
+        assert all(1 <= score <= 10 for score in scores_no_ties.values())
+
+        with pytest.raises(ValueError):
+            generate_scores(["Alex"], 50, 10, True)
+
+        with pytest.raises(ValueError):
+            generate_scores(["A", "B", "C"], 1, 2, False)
