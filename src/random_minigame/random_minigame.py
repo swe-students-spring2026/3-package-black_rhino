@@ -22,3 +22,27 @@ def roll_dice(num_rolls, num_sides, low_val, step):
     
     return total
 
+def coin_flip(num_flips):
+
+    if not isinstance(num_flips, int):
+        raise TypeError("num_flips must be an integer")
+    if num_flips < 0:
+        raise ValueError("num_flips cannot be negative")
+
+    heads = 0
+    tails = 0
+
+    for flip in range(num_flips):
+        
+        if random.randint(0, 1) == 0:
+            heads += 1
+        else:
+            tails += 1
+
+    if heads > tails:
+        return "heads"
+    elif tails > heads:
+        return "tails"
+    else:
+        return "tie"
+
