@@ -48,7 +48,7 @@ print(f"Total of dice roll: {total}")
 - **Coin Flip**:
 ```bash
 result = rm.coin_flip(num_flips=5)
-print(f"Coin flip outcome: {result}") # Returns "heads", "tails", or "tie"
+print(f"Coin flip outcome: {result}")
 ```
 - **Generate Scores**:
 ```bash
@@ -75,7 +75,7 @@ print(f"Teams: {teams}")
 
 ### Complete Example Program
 
-Here is a full Python program demonstrating all functions together: [Example Program]()
+Here is a full Python program demonstrating all functions together: [Example Program](example.py)
 
 ## How to contribute to this project
 
