@@ -74,7 +74,7 @@ print(f"Teams: {teams}")
 
 ### Complete Example Program
 
-Here is a full Python program demonstrating all functions together: [Example Program](examples/example.py)
+Here is a full Python program demonstrating all functions together: [Example Program](https://github.com/swe-students-spring2026/3-package-black_rhino/blob/main/example.py)
 
 ## How to Contribute to This Project
 
