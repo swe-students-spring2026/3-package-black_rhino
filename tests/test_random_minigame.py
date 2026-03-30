@@ -108,31 +108,31 @@ class Tests:
         with pytest.raises(ValueError):
             generate_scores(["A", "B", "C"], 1, 2, False)
 
-def test_generate_teams_distribution():
-    names = ["Alice", "Bob", "Charlie", "Dana", "Eli"]
-    num_teams = 2
+    def test_generate_teams_distribution(self):
+        names = ["Alice", "Bob", "Charlie", "Dana", "Eli"]
+        num_teams = 2
 
-    # Set a random seed 
-    random.seed(0)
+        # Set a random seed 
+        random.seed(0)
 
-    # Call the generate_teams function
-    teams = generate_teams(names, num_teams)
+        # Call the generate_teams function
+        teams = generate_teams(names, num_teams)
 
-    # Check if the result is a dictionary
-    assert isinstance(teams, dict)
+        # Check if the result is a dictionary
+        assert isinstance(teams, dict)
 
-    # Collect all members from the teams
-    all_members = []
-    for members in teams.values():
-        for m in members:
-            all_members.append(m)
+        # Collect all members from the teams
+        all_members = []
+        for members in teams.values():
+            for m in members:
+                all_members.append(m)
 
-    # Ensure all members are included and no duplicates exist
-    assert set(all_members) == set(names)
-    assert len(all_members) == len(names)
+        # Ensure all members are included and no duplicates exist
+        assert set(all_members) == set(names)
+        assert len(all_members) == len(names)
 
-    # Check that team sizes differ by at most 1 in case of odd number of names
-    sizes = []
-    for members in teams.values():
-        sizes.append(len(members))
-    assert max(sizes) - min(sizes) <= 1
+        # Check that team sizes differ by at most 1 in case of odd number of names
+        sizes = []
+        for members in teams.values():
+            sizes.append(len(members))
+        assert max(sizes) - min(sizes) <= 1
