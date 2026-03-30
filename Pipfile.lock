@@ -1,7 +1,7 @@
 {
     "_meta": {
         "hash": {
-            "sha256": "318df9700052564d17cff3db39d2d87b2ba354661704ccff51633a0d20140aba"
+            "sha256": "466ca4144717611ed4ece5c429811eac492791bb08057725c4c8e44bd57acaa3"
         },
         "pipfile-spec": 6,
         "requires": {},
@@ -14,6 +14,15 @@
         ]
     },
     "default": {
+        "blackrhinorandomminigame": {
+            "hashes": [
+                "sha256:b081e2bed00b0f85e47f844e0bb4c04f736055b127703f4fa750de8862261499",
+                "sha256:e56af8d359dcb687490b7ac7e0ab562ea5e9a5f0da1fe1b06228d85fcbda453d"
+            ],
+            "index": "pypi",
+            "markers": "python_version >= '3.12'",
+            "version": "==0.1.5"
+        },
         "build": {
             "hashes": [
                 "sha256:35b14e1ee329c186d3f08466003521ed7685ec15ecffc07e68d706090bf161d1",

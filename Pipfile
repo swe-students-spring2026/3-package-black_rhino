@@ -8,6 +8,7 @@ coverage = "*"
 pytest-cov = "*"
 build = "*"
 twine = "*"
+blackrhinorandomminigame = "*"
 
 [dev-packages]
 pytest = "*"
