@@ -82,7 +82,8 @@ Follow these steps to set up the project locally:
 
 1. Clone the Repository:
 ```bash
-git clone https://github.com/swe-students-spring2026/3-package-black_rhino.git cd 3-package-black_rhino
+git clone https://github.com/swe-students-spring2026/3-package-black_rhino.git
+cd 3-package-black_rhino
 ```
 2. Set Up Virtual Environment (pipenv):
 ```bash
