@@ -1,6 +1,6 @@
 import random
 import pytest
-from random_minigame import choose_option, roll_dice, coin_flip, generate_scores
+from random_minigame import choose_option, roll_dice, coin_flip, generate_scores, generate_teams
 
 class Tests:
 
@@ -107,3 +107,23 @@ class Tests:
 
         with pytest.raises(ValueError):
             generate_scores(["A", "B", "C"], 1, 2, False)
+
+def test_generate_teams_distribution():
+    names = ["Alice", "Bob", "Charlie", "Dana", "Eli"]
+    num_teams = 2
+    random.seed(0)
+    teams = generate_teams(names, num_teams)
+
+    assert isinstance(teams, dict)
+
+    all_members = []
+    for members in teams.values():
+        for m in members:
+            all_members.append(m)
+    assert set(all_members) == set(names)
+    assert len(all_members) == len(names)
+
+    sizes = []
+    for members in teams.values():
+        sizes.append(len(members))
+    assert max(sizes) - min(sizes) <= 1
