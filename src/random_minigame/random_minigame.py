@@ -27,16 +27,16 @@ def roll_dice(num_rolls, num_sides, low_val, step):
     
     # check to make sure the inputs are valid integers
     if (num_rolls < 1):
-        raise TypeError("num_rolls must be greater than 0")
+        raise ValueError("num_rolls must be greater than 0")
     
     elif (num_sides < 1):
-        raise TypeError("num_sides must be greater than 0")
+        raise ValueError("num_sides must be greater than 0")
     
     elif (low_val < 0):
-        raise TypeError("low_val must be greater than or equal to 0")
+        raise ValueError("low_val must be greater than or equal to 0")
     
     elif (step < 1):
-        raise TypeError("step must be greater than 0")
+        raise ValueError("step must be greater than 0")
 
     faces = []
     for face in range(num_sides):
