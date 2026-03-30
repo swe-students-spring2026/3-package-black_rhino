@@ -24,7 +24,6 @@ This package on PyPi: [Random Minigame]()
 ```bash
 pip install random-minigame
 ```
-
 2. Import this package into your Python file:
 ```bash
 import random_minigame as rm
@@ -79,7 +78,30 @@ Here is a full Python program demonstrating all functions together: [Example Pro
 
 ## How to contribute to this project
 
+Follow these steps to set up the project locally:
 
+1. Clone the Repository:
+```bash
+git clone https://github.com/swe-students-spring2026/3-package-black_rhino.git cd 3-package-black_rhino
+```
+2. Set Up Virtual Environment (pipenv):
+```bash
+pip install pipenv
+pipenv shell
+pipenv install
+```
+3. Run Tests:
+```bash
+pytest
+```
+4. Build Package:
+```bash
+python 
+```
+5. Exit the Virtual Environment:
+```bash
+exit
+```
 
 ## Teammates
 
