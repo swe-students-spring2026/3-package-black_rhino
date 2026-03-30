@@ -108,5 +108,5 @@ exit
 - [Chase Vitale](https://github.com/chasecvitale)
 - [Harrison Wong](https://github.com/harrisonmangitwong)
 - [Jerry Wang](https://github.com/JerrrryWang)
-- [aw](https://github.com/aw4630)
+- [Alan Wu](https://github.com/aw4630)
 - [Ethan Tan](https://github.com/ethantyr)
