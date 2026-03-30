@@ -5,7 +5,7 @@ build-backend = "setuptools.build_meta"
 [project]
 name = "blackrhinorandomminigame"
 description = "A lighthearted Python package with random mini-game utilities."
-version = "0.1.4"
+version = "0.1.5"
 authors = [
   { name = "Chase Vitale" },
   { name = "Harrison Wong" },
