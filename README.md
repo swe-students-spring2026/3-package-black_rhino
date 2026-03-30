@@ -26,7 +26,7 @@ pip install blackrhinorandomminigame
 ```
 2. Import this package into your Python file:
 ```bash
-import blackrhinorandomminigame as rm
+from blackrhinorandomminigame import random_minigame as rm
 ```
 
 ### Usage examples
@@ -108,5 +108,5 @@ exit
 - [Chase Vitale](https://github.com/chasecvitale)
 - [Harrison Wong](https://github.com/harrisonmangitwong)
 - [Jerry Wang](https://github.com/JerrrryWang)
-- [aw](https://github.com/aw4630)
+- [Alan Wu](https://github.com/aw4630)
 - [Ethan Tan](https://github.com/ethantyr)

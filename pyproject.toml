@@ -3,14 +3,32 @@ requires = ["setuptools>=77", "wheel"]
 build-backend = "setuptools.build_meta"
 
 [project]
-name = "black-rhino-random-minigame"
-version = "0.1.0"
+name = "blackrhinorandomminigame"
 description = "A lighthearted Python package with random mini-game utilities."
-readme = "README.md"
-requires-python = ">=3.12"
+version = "0.1.0"
 authors = [
-  { name = "Black Rhino Team" }
+  { name = "Chase Vitale" },
+  { name = "Harrison Wong" },
+  { name = "Jerry Wang" },
+  { name = "Alan Wu" },
+  { name = "Ethan Tan" }
 ]
+license = { file = "LICENSE" }
+readme = "README.md"
+keywords = ["python", "package", "random", "game"]
+requires-python = ">=3.12"
+classifiers = [
+    "Programming Language :: Python :: 3",
+    "Intended Audience :: Education",
+    "License :: OSI Approved :: GNU General Public License v3 (GPLv3)",
+    "Operating System :: OS Independent",
+]
+
+[project.urls]
+"Homepage" = "https://github.com/swe-students-spring2026/3-package-black_rhino"
+"Repository" = "https://github.com/swe-students-spring2026/3-package-black_rhino.git"
+"Bug Tracker" = "https://github.com/swe-students-spring2026/3-package-black_rhino/issues"
+
 
 [tool.pytest.ini_options]
 pythonpath = "src"
