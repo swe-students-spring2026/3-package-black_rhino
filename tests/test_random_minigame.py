@@ -108,7 +108,7 @@ class Tests:
         with pytest.raises(ValueError):
             generate_scores(["A", "B", "C"], 1, 2, False)
 
-    def test_generate_teams_distribution():
+    def test_generate_teams_distribution(self):
         names = ["Alice", "Bob", "Charlie", "Dana", "Eli"]
         num_teams = 2
 
