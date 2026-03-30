@@ -11,6 +11,33 @@ def choose_option(choices):
     return random.choice(choices)
 
 def roll_dice(num_rolls, num_sides, low_val, step):
+
+    #check to make sure the inputs are integers
+    if not isinstance(num_rolls, int):
+        raise TypeError("num_rolls must be an integer")
+    
+    elif not isinstance(num_sides, int):
+        raise TypeError("num_sides must be an integer")
+    
+    elif not isinstance(low_val, int):
+        raise TypeError("low_val must be an integer")
+    
+    elif not isinstance(step, int):
+        raise TypeError("step must be an integer")
+    
+    # check to make sure the inputs are valid integers
+    if (num_rolls < 1):
+        raise TypeError("num_rolls must be greater than 0")
+    
+    elif (num_sides < 1):
+        raise TypeError("num_sides must be greater than 0")
+    
+    elif (low_val < 0):
+        raise TypeError("low_val must be greater than or equal to 0")
+    
+    elif (step < 1):
+        raise TypeError("step must be greater than 0")
+
     faces = []
     for face in range(num_sides):
         faces.append(low_val + (face * step))
