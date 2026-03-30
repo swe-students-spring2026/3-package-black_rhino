@@ -74,3 +74,30 @@ def generate_scores(names, low_score, high_score, ties_allowed):
 
     return name_scores
 
+def generate_teams(names, num_teams):
+    """
+    Distributes `names` into teams in a randomized order.
+    names: list of member names. 
+    num_teams: int number of teams to create.
+    Returns a dictionary that maps team number to a list of members.
+    """
+    if num_teams < 1:
+        raise ValueError("num_teams must be >= 1")
+
+    members = list(names)
+    random.shuffle(members)
+
+    teams = {}
+    i = 1
+    while i <= num_teams:
+        teams[i] = []
+        i += 1
+
+    team_no = 1
+    for member in members:
+        teams[team_no].append(member)
+        team_no += 1
+        if team_no > num_teams:
+            team_no = 1
+
+    return teams

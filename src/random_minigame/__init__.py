@@ -1,1 +1,1 @@
-from .random_minigame import choose_option, roll_dice, coin_flip, generate_scores
+from .random_minigame import choose_option, roll_dice, coin_flip, generate_scores, generate_teams
