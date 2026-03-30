@@ -1,4 +1,4 @@
-# Random Minigame Python Package
+# blackrhinorandomminigame Python Package
 
 [![Python package](https://github.com/swe-students-spring2026/3-package-black_rhino/actions/workflows/python-package.yml/badge.svg)](https://github.com/swe-students-spring2026/3-package-black_rhino/actions/workflows/python-package.yml)
 
@@ -22,11 +22,11 @@ This package on PyPi: [Random Minigame]()
 
 1. Install this package using pip:
 ```bash
-pip install random-minigame
+pip install blackrhinorandomminigame
 ```
 2. Import this package into your Python file:
 ```bash
-import random_minigame as rm
+import blackrhinorandomminigame as rm
 ```
 
 ### Usage examples
@@ -109,4 +109,4 @@ exit
 - [Harrison Wong](https://github.com/harrisonmangitwong)
 - [Jerry Wang](https://github.com/JerrrryWang)
 - [aw](https://github.com/aw4630)
-- [Ethan](https://github.com/ethantyr)
+- [Ethan Tan](https://github.com/ethantyr)
