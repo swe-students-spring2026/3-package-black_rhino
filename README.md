@@ -76,7 +76,7 @@ print(f"Teams: {teams}")
 
 Here is a full Python program demonstrating all functions together: [Example Program](example.py)
 
-## How to contribute to this project
+## How to Contribute to This Project
 
 Follow these steps to set up the project locally:
 
@@ -96,7 +96,7 @@ pytest
 ```
 4. Build Package:
 ```bash
-python 
+python -m build
 ```
 5. Exit the Virtual Environment:
 ```bash
