@@ -18,6 +18,10 @@ This package on PyPi: [Random Minigame](https://pypi.org/project/blackrhinorando
 
 ## How to Install and Use This Package
 
+### Requirements
+
+This package requires Python 3.12 or later.
+
 ### Installation
 
 1. Install this package using pip:
