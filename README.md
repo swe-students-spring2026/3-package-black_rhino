@@ -14,9 +14,13 @@ A Python package to simplify game-related functions, so that developers don't ha
 
 ## PyPi Package
 
-This package on PyPi: [Random Minigame]()
+This package on PyPi: [Random Minigame](https://pypi.org/project/blackrhinorandomminigame/)
 
 ## How to Install and Use This Package
+
+### Requirements
+
+This package requires Python 3.12 or later.
 
 ### Installation
 
@@ -25,8 +29,8 @@ This package on PyPi: [Random Minigame]()
 pip install blackrhinorandomminigame
 ```
 2. Import this package into your Python file:
-```bash
-import blackrhinorandomminigame as rm
+```python
+from blackrhinorandomminigame import random_minigame as rm
 ```
 
 ### Usage examples
@@ -34,29 +38,29 @@ import blackrhinorandomminigame as rm
 Here is how to use each function in your own code:
 
 - **Choose Option**: 
-```bash
+```python
 options = ["rock", "paper", "scissors"]
 choice = rm.choose_option(options)
 print(f"Opponent chose: {choice}")
 ```
 - **Roll Dice**:
-```bash
+```python
 total = rm.roll_dice(num_rolls=2, num_sides=6, low_val=1, step=1)
 print(f"Total of dice roll: {total}")
 ```
 - **Coin Flip**:
-```bash
+```python
 result = rm.coin_flip(num_flips=5)
 print(f"Coin flip outcome: {result}")
 ```
 - **Generate Scores**:
-```bash
+```python
 players = ["Alice", "Bob", "Charlie", "Diana"]
 scores = rm.generate_scores(names=players, low_score=0, high_score=100, ties_allowed=True)
 print(f"Scores: {scores}")
 ```
 - **Generate Teams**:
-```bash
+```python
 players = ["Alice", "Bob", "Charlie", "Diana", "Eve", "Frank"]
 teams = rm.generate_teams(names=players, num_teams=2)
 print(f"Teams: {teams}")
@@ -74,7 +78,7 @@ print(f"Teams: {teams}")
 
 ### Complete Example Program
 
-Here is a full Python program demonstrating all functions together: [Example Program](example.py)
+Here is a full Python program demonstrating all functions together: [Example Program](https://github.com/swe-students-spring2026/3-package-black_rhino/blob/main/example.py)
 
 ## How to Contribute to This Project
 
@@ -82,7 +86,8 @@ Follow these steps to set up the project locally:
 
 1. Clone the Repository:
 ```bash
-git clone https://github.com/swe-students-spring2026/3-package-black_rhino.git cd 3-package-black_rhino
+git clone https://github.com/swe-students-spring2026/3-package-black_rhino.git
+cd 3-package-black_rhino
 ```
 2. Set Up Virtual Environment (pipenv):
 ```bash
@@ -108,5 +113,5 @@ exit
 - [Chase Vitale](https://github.com/chasecvitale)
 - [Harrison Wong](https://github.com/harrisonmangitwong)
 - [Jerry Wang](https://github.com/JerrrryWang)
-- [aw](https://github.com/aw4630)
+- [Alan Wu](https://github.com/aw4630)
 - [Ethan Tan](https://github.com/ethantyr)

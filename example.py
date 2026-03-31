@@ -1,4 +1,4 @@
-import blackrhinorandomminigame as rm
+from blackrhinorandomminigame import random_minigame as rm
 
 players = ["Alice", "Bob", "Charlie", "Diana"]
 

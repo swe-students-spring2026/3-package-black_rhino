@@ -6,6 +6,9 @@ name = "pypi"
 [packages]
 coverage = "*"
 pytest-cov = "*"
+build = "*"
+twine = "*"
+blackrhinorandomminigame = "*"
 
 [dev-packages]
 pytest = "*"
