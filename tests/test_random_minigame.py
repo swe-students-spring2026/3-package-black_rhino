@@ -136,3 +136,30 @@ class Tests:
         for members in teams.values():
             sizes.append(len(members))
         assert max(sizes) - min(sizes) <= 1
+
+        # Test empty input
+        names = []
+        num_teams = 2
+        teams = generate_teams(names, num_teams)
+        assert len(teams) == num_teams
+        assert teams == {1: [], 2: []}
+
+        # Test more teams than names
+        names = ["Alice", "Bob"]
+        num_teams = 5
+        teams = generate_teams(names, num_teams)
+        assert len(teams) == num_teams
+        all_members = []
+        for members in teams.values():
+            for m in members:
+                all_members.append(m)
+        assert set(all_members) == set(names)
+
+        # Test invalid input: num_teams <= 0
+        names = ["Alice", "Bob", "Charlie"]
+        num_teams = 0
+        try:
+            generate_teams(names, num_teams)
+            assert False, "Expected an exception for num_teams <= 0"
+        except ValueError:
+            pass
