@@ -155,6 +155,19 @@ class Tests:
                 all_members.append(m)
         assert set(all_members) == set(names)
 
+        # Test repeated names
+        names = ["Alice", "Bob", "Alice", "Charlie", "Bob"]
+        num_teams = 3
+        teams = generate_teams(names, num_teams)
+        all_members = []
+        for members in teams.values():
+            for m in members:
+                all_members.append(m)
+        assert all_members.count("Alice") == 2
+        assert all_members.count("Bob") == 2
+        assert all_members.count("Charlie") == 1
+        assert len(all_members) == len(names)
+
         # Test invalid input: num_teams <= 0
         names = ["Alice", "Bob", "Charlie"]
         num_teams = 0
